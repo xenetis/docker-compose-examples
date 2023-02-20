@@ -4,23 +4,39 @@
 
 ## Docker Compose examples for selfhosted projects
 
- - Config and Datas volumes are set by default in [global.env](global.env), feel free to update it as your own directories
- - Docker networks are not hardcoded and may have to be created or defined manually
- - Example config files are provided for examples, you can locate it in your own config directory.
- - Default credentials should be adjusted, just search: **passwordChangeMePlease**
+ - Docker network is defined in root [docker-compose.yml](docker-compose.yml), just run `make init`to create network the first time
+ - Config and Datas volumes are set by default in **.env** of each directory, feel free to update it as your own directories
+ - Example config files are provided for examples, you can locate it in your own config directory
+ - Default credentials should be adjusted, just search: **secretPasswordChangeMePlease**
 
 ---
 
-Otherwise, more simple:
+## How to use
 
 ```bash
 git clone https://github.com/xenetis/docker-compose-examples
 cd docker-compose-examples
-cd <container>
-docker compose up -d
+make init
+make start <container>
 ```
+---
+
+## Makefile commands
+
+ - **init** run the root docker-compose.yml (hello-word) and create default network
+ - **clean** prune unused containers and images
+ - **start \<container>** start a container stack 
+ - **stop \<container>** stop a container stack
+- **restart \<container>** restart a container stack
 
 ---
+
+## Monitoring
+- [Portainer](portainer)
+- [Portainer Agent](portainer-agent)
+
+---
+
 
 ## Analytics
 - [Matomo](matomo)

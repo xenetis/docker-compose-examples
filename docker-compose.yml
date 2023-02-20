@@ -1,5 +1,12 @@
 version: "3.5"
 
+services:
+  hello-world:
+    image: hello-world
+    container_name: hello-world
+    networks:
+      xenetis-network:
+
 networks:
   xenetis-network:
     driver: bridge

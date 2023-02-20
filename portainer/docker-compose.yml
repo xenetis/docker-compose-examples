@@ -1,0 +1,25 @@
+version: "3.5"
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: "portainer"
+    restart: always
+    ports:
+      - "9000:9000"
+      - "8000:8000"
+      - "9444:9443"
+    environment:
+      TZ: Europe/Paris
+      AGENT_SECRET: ${PORTAINER_AGENT_SECRET}
+    command: -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${PATH_DATAS}/portainer/socket:/socket
+      - ${PATH_DATAS}/portainer/data:/data
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

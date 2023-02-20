@@ -8,9 +8,6 @@ services:
     image: 'matomo:4.10.1-apache'
     volumes:
       - '${PATH_DATAS}/matomo/data:/var/www/html'
-    env_file:
-      - ../global.env
-      - .env
     environment:
       TZ: Europe/Paris
       MATOMO_DATABASE_HOST: 'matomo-db'
@@ -34,8 +31,12 @@ services:
       MARIADB_USER: '${MATOMO_DB_USERNAME}'
       MARIADB_PASSWORD: '${MATOMO_DB_PASSWORD}'
     volumes:
-      - '${PATH_DATAS}/matomo/mysql:/var/lib/mysql'
+      - "${PATH_DATAS}/matomo/mysql: /var/lib/mysql"
     networks:
       xenetis-network:
     command: mysqld ${MARIADB_OPTS}
 
+networks:
+  xenetis-network:
+    external:
+      name: xenetis-network
