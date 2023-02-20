@@ -1,0 +1,7 @@
+version: "3.5"
+
+networks:
+  xenetis-network:
+    driver: bridge
+    name: "xenetis-network"
+
