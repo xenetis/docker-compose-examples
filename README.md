@@ -38,8 +38,10 @@ make start <container>
 ---
 
 ## Monitoring
+- [Dozzle](dozzle)
 - [Portainer](portainer)
 - [Portainer Agent](portainer-agent)
+
 
 ---
 
