@@ -31,6 +31,12 @@ make start <container>
 
 ---
 
+## Dashboard
+ - [Heimdall](heimdall)
+ - [Homepage](homepage)
+
+---
+
 ## Monitoring
 - [Portainer](portainer)
 - [Portainer Agent](portainer-agent)
