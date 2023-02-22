@@ -1,9 +1,13 @@
 # Docker-compose examples
 
+Docker Compose examples for selfhosted projects
+
 ---
 
-## Docker Compose examples for selfhosted projects
+## ✨ Requirements
+ - Docker Compose
 
+## 📖 Infos
  - Docker network is defined in root [docker-compose.yml](docker-compose.yml), just run `make init`to create network the first time
  - Config and Datas volumes are set by default in **.env** of each directory, feel free to update it as your own directories
  - Example config files are provided for examples, you can locate it in your own config directory
@@ -11,7 +15,7 @@
 
 ---
 
-## How to use
+## 🎓 Usage
 
 ```bash
 git clone https://github.com/xenetis/docker-compose-examples
@@ -21,7 +25,7 @@ make start <container>
 ```
 ---
 
-## Makefile commands
+## 🔧 Makefile commands
 
  - **init** run the root docker-compose.yml (hello-word) and create default network
  - **clean** prune unused containers and images
@@ -31,20 +35,21 @@ make start <container>
 
 ---
 
-## Dashboard
+## 🐳 Project List
+
+### Dashboard
  - [Heimdall](heimdall)
  - [Homepage](homepage)
 
 ---
 
-## Monitoring
+### Monitoring
 - [Dozzle](dozzle)
+- 
 - [Portainer](portainer)
 - [Portainer Agent](portainer-agent)
 
-
 ---
 
-
-## Analytics
+### Analytics
 - [Matomo](matomo)

@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  ovhmonitoring:
+    image: jbelien/ovh-monitoring
+    container_name: ovhmonitoring
+    environment:
+      - TZ=Europe/Paris
+    volumes:
+      - monitoring.ini:/var/www/html/monitoring.ini
+      - ${PATH_DATAS}/ovhmonitoring/cache:/var/www/html/cache
+    ports:
+      - "8004:80"
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
