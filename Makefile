@@ -1,5 +1,4 @@
 # MAKEFILE https://github.com/xenetis/docker-compose-examples
-# @
 
 init:
 	docker-compose up

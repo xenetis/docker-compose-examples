@@ -4,7 +4,8 @@ Docker Compose examples for selfhosted projects
 
 ---
 
-## ✨ Requirements
+## 📝 Requirements
+ - Docker 
  - Docker Compose
 
 ## 📖 Infos
@@ -35,15 +36,15 @@ make start <container>
 
 ---
 
-## 🐳 Project List
+## 🗂 Project List
 
-### Dashboard
+### 🖥 Dashboard
  - [Heimdall](heimdall)
  - [Homepage](homepage)
 
 ---
 
-### Monitoring
+### 📺 Monitoring
 - [Dozzle](dozzle)
 - [OVH-Monitoring](ovhmonitoring)
 - [Portainer](portainer)
@@ -51,5 +52,10 @@ make start <container>
 
 ---
 
-### Analytics
+### 🔐 Source Code Management & Version Control
+- [Gitea](gitea)
+
+---
+
+### 🧮Analytics
 - [Matomo](matomo)

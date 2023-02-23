@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  gitea:
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    hostname: gitea
+    ports:
+      - 8004:3000
+      - 2222:22
+    image: gitea/gitea:latest
+    restart: unless-stopped
+    volumes:
+      - ${PATH_DATAS}/gitea:/data
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
