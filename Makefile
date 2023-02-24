@@ -1,4 +1,13 @@
 # MAKEFILE https://github.com/xenetis/docker-compose-examples
+.SILENT: default
+
+default:
+	echo "\
+	- 'init' run the root docker-compose.yml (hello-word) and create default network \n\
+	- 'clean' prune unused containers and images \n\
+	- 'start <container>' start a container stack \n\
+	- 'stop <container>' stop a container stack \n\
+	- 'restart <container>' restart a container stack "
 
 init:
 	docker-compose up

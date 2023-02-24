@@ -28,10 +28,10 @@ make start <container>
 
 ## 🔧 Makefile commands
 
- - **init** run the root docker-compose.yml (hello-word) and create default network
- - **clean** prune unused containers and images
- - **start \<container>** start a container stack 
- - **stop \<container>** stop a container stack
+- **init** run the root docker-compose.yml (hello-word) and create default network
+- **clean** prune unused containers and images
+- **start \<container>** start a container stack 
+- **stop \<container>** stop a container stack
 - **restart \<container>** restart a container stack
 
 ---
