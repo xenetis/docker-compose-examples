@@ -22,7 +22,7 @@ services:
     image: gitea/gitea:latest
     restart: unless-stopped
     volumes:
-      - ${PATH_DATAS}/gitea:/data
+      - ${PATH_DATAS}/gitea-app:/data
     networks:
       xenetis-network:
 
@@ -31,7 +31,7 @@ services:
     container_name: gitea-db
     restart: always
     volumes:
-      - ${DOCKER_TECHNICAL_PATH}/datas/gitea/database:/var/lib/mysql
+      - ${PATH_DATAS}/gitea-db:/var/lib/mysql
     environment:
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       - MARIADB_DATABASE=${MARIADB_DATABASE}
