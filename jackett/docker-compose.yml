@@ -1,0 +1,24 @@
+version: "3.5"
+
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - AUTO_UPDATE=true #optional
+      - RUN_OPTS= #optional
+    volumes:
+      - ${PATH_CONFIG}/jackett:/config
+      - ${PATH_DATAS}/downloads:/downloads
+    ports:
+      - 8006:9117
+    restart: unless-stopped
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
