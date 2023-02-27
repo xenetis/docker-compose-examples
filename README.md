@@ -39,33 +39,40 @@ make start <container>
 ## 🗂 Project List
 
 ### 🖥 Dashboard
- - [Heimdall](heimdall)
- - [Homepage](homepage)
+- [Heimdall](heimdall) - Heimdall is an elegant solution to organise all your web applications.
+- [Homepage](homepage) - A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations.
 
 ---
 
-### 📺 Monitoring
-- [Dozzle](dozzle)
-- [OVH-Monitoring](ovhmonitoring)
-- [Portainer](portainer)
-- [Portainer Agent](portainer-agent)
+### 📺 Media manager (Photos, Music, Videos)
+- [Plex](plex) - Tune in to Live TV on Plex anytime, on almost any device—no hardware required. With action, comedy, movies, news, and more streaming 24/7, there’s a channel for everyone.
+
+---
+
+### 📋 Monitoring
+- [Dozzle](dozzle) - Dozzle is a simple and responsive application that provides you with a web based interface to monitor your Docker container logs live.
+- [OVH-Monitoring](ovhmonitoring) - OVH VPS/Cloud Monitoring via OVH API using PHP.
+- [Portainer](portainer) - Portainer is a lightweight management UI which allows you to easily manage your different Docker environments (Docker hosts or Swarm clusters).
+- [Portainer Agent](portainer-agent) - The Portainer Agent is a workaround for a Docker API limitation when using the Docker API to manage a Docker environment.
 
 ---
 
 ### 🌐 Networking
-- [Torproxy](torproxy)
+- [Nordvpn](nordvpn) - Official NordVPN client in a docker container; it makes routing traffic through the NordVPN network easy and secure with an integrated iptables kill switch.
+- [Torproxy](torproxy) - Tor and Privoxy (web proxy configured to route through tor) docker container
 
 ---
 
 ### 🗃 Torrent
-- [Deluge](deluge)
+- [Deluge](deluge) - This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel.
+- [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
 
 ---
 
 ### 🔐 Source Code Management & Version Control
-- [Gitea](gitea)
+- [Gitea](gitea) - Community managed fork of Gogs, lightweight code hosting solution.
 
 ---
 
 ### 🧮Analytics
-- [Matomo](matomo)
+- [Matomo](matomo) - Matomo is the leading Free/Libre open analytics platform.
