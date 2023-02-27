@@ -18,15 +18,10 @@ services:
       - PGID=998
       - UMASK_SET=0022
       - TZ=Europe/Paris
-      ###### NORDVPN CONFIG ######
-      - OPENVPN_PROVIDER=NORDVPN
-      - OPENVPN_USERNAME=secretPasswordChangeMePlease
-      - OPENVPN_PASSWORD=secretPasswordChangeMePlease
-      ###### IPVANISH CONFIG ######
-#      - OPENVPN_PROVIDER=IPVANISH
-#      - OPENVPN_CONFIG=ipvanish-NL-Amsterdam-ams-a40,ipvanish-NL-Amsterdam-ams-a41,ipvanish-NL-Amsterdam-ams-a42,ipvanish-NL-Amsterdam-ams-a43,ipvanish-NL-Amsterdam-ams-a44,ipvanish-NL-Amsterdam-ams-a45
-#      - OPENVPN_USERNAME=email@example.com
-#      - OPENVPN_PASSWORD=secretPasswordChangeMePlease
+      - OPENVPN_PROVIDER=${OPENVPN_PROVIDER}
+      - OPENVPN_USERNAME=${OPENVPN_USERNAME}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - OPENVPN_CONFIG=${OPENVPN_CONFIG}
       - WEBPROXY_ENABLED=false
       - LOCAL_NETWORK=192.168.0.0/16
     volumes:
