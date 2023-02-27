@@ -2,10 +2,19 @@ version: "3.5"
 
 services:
   gitea:
-    container_name: gitea
+    container_name: gitea-app
     environment:
+      - TZ=Europe/Paris
       - USER_UID=1000
       - USER_GID=1000
+      - GITEA__database__DB_TYPE=mysql
+      - GITEA__database__HOST=gitea-db:3306
+      - GITEA__database__NAME=${MARIADB_DATABASE}
+      - GITEA__database__USER=${MARIADB_USER}
+      - GITEA__database__PASSWD=${MARIADB_PASSWORD}
+      - GITEA__service__DISABLE_REGISTRATION=true
+      - GITEA__server__SSH_PORT=2222
+      - GITEA__server__SSH_DOMAIN=git.example.com
     hostname: gitea
     ports:
       - 8004:3000
@@ -14,6 +23,20 @@ services:
     restart: unless-stopped
     volumes:
       - ${PATH_DATAS}/gitea:/data
+    networks:
+      xenetis-network:
+
+  gitea-db:
+    image: mariadb:latest
+    container_name: gitea-db
+    restart: always
+    volumes:
+      - ${DOCKER_TECHNICAL_PATH}/datas/gitea/database:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
     networks:
       xenetis-network:
 
