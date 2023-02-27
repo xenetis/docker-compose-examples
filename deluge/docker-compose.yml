@@ -1,0 +1,40 @@
+version: "3.5"
+
+services:
+
+  deluge:
+    image: sgtsquiggs/deluge-openvpn
+    container_name: deluge
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8005:8112
+      - 58846:58846
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - PUID=1001
+      - PGID=998
+      - UMASK_SET=0022
+      - TZ=Europe/Paris
+      ###### NORDVPN CONFIG ######
+      - OPENVPN_PROVIDER=NORDVPN
+      - OPENVPN_USERNAME=secretPasswordChangeMePlease
+      - OPENVPN_PASSWORD=secretPasswordChangeMePlease
+      ###### IPVANISH CONFIG ######
+#      - OPENVPN_PROVIDER=IPVANISH
+#      - OPENVPN_CONFIG=ipvanish-NL-Amsterdam-ams-a40,ipvanish-NL-Amsterdam-ams-a41,ipvanish-NL-Amsterdam-ams-a42,ipvanish-NL-Amsterdam-ams-a43,ipvanish-NL-Amsterdam-ams-a44,ipvanish-NL-Amsterdam-ams-a45
+#      - OPENVPN_USERNAME=email@example.com
+#      - OPENVPN_PASSWORD=secretPasswordChangeMePlease
+      - WEBPROXY_ENABLED=false
+      - LOCAL_NETWORK=192.168.0.0/16
+    volumes:
+      - ${PATH_DATAS}/downloads:/downloads
+      - ${PATH_CONFIG}/deluge:/config
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

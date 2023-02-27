@@ -52,6 +52,11 @@ make start <container>
 
 ---
 
+### 🗃 Torrent
+- [Deluge](deluge)
+
+---
+
 ### 🔐 Source Code Management & Version Control
 - [Gitea](gitea)
 
