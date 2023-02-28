@@ -83,5 +83,6 @@ make start <container>
 
 ---
 
-### 🧮Analytics
+### 🧮 Analytics
 - [Matomo](matomo) - Matomo is the leading Free/Libre open analytics platform.
+- [Plausible](plausible) - Plausible is intuitive, lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. Made and hosted in the EU, powered by European-owned cloud infrastructure 🇪🇺.
