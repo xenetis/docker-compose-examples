@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+
+  mariadb:
+    container_name: "mariadb"
+    image: 'mariadb:latest'
+    environment:
+      - TZ=Europe/Paris
+      - MARIADB_ROOT_PASSWORD='${MARIADB_ROOT_PASSWORD}'
+      - MARIADB_DATABASE='${MARIADB_DATABASE}'
+      - MARIADB_USER='${MARIADB_USER}'
+      - MARIADB_PASSWORD='${MARIADB_PASSWORD}'
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf
+      - "${PATH_DATAS}/mariadb/datas:/var/lib/mysql"
+      - "${PATH_DATAS}/mariadb/logs:/var/log/mysql"
+    ports:
+      - "3306:3306"
+    networks:
+      xenetis-network:
+    command: mysqld ${MARIADB_OPTS}
+
+networks:
+  xenetis-network:
+    name: xenetis-network

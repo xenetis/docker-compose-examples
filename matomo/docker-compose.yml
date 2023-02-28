@@ -30,12 +30,11 @@ services:
       MARIADB_USER: '${MARIADB_USER}'
       MARIADB_PASSWORD: '${MARIADB_PASSWORD}'
     volumes:
-      - "${PATH_DATAS}/matomo/mysql: /var/lib/mysql"
+      - "${PATH_DATAS}/matomo/mysql:/var/lib/mysql"
     networks:
       xenetis-network:
     command: mysqld ${MARIADB_OPTS}
 
 networks:
   xenetis-network:
-    external:
-      name: xenetis-network
+    name: xenetis-network
