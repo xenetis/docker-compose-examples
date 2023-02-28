@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  nordvpn:
+    container_name: nordvpn
+    image: ghcr.io/bubuntux/nordvpn
+    cap_add:
+      - NET_ADMIN               # Required
+      - NET_RAW                 # Required
+    environment:
+      - TZ=Europe/Paris
+      - USER=${NORDVPN_USER}    # Required
+      - PASS=${NORDVPN_PASS}    # Required
+      - CONNECT=United_States
+      - TECHNOLOGY=NordLynx
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1  # Recommended if using ipv4 only
+
+  network-multitool:
+    container_name: network-multitool
+    image: wbitt/network-multitool:alpine-extra
+    cap_add:
+      - NET_ADMIN               # Required
+      - NET_RAW                 # Required
+    environment:
+      - TZ=Europe/Paris
+    depends_on:
+      - nordvpn
+    network_mode: 'container:nordvpn'
