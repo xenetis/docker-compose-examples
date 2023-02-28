@@ -64,7 +64,14 @@ make start <container>
 
 ---
 
+### 🔏 Pastbins
+
+- [PrivateBin](privatebin) - PrivateBin is a minimalist, opensource online pastebin/discussion board where the server has zero knowledge of hosted data.
+
+---
+
 ### 🗃 Torrent
+- [Transmission](transmission) - A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux
 - [Deluge](deluge) - This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel.
 - [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
 
