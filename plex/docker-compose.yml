@@ -26,3 +26,10 @@ services:
       - ${PATH_CONFIG}/plex:/config
       - ${PATH_DATAS}/plex/temp:/transcode
       - ${PATH_DATAS}/plex/medias:/data
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    external:
+      name: xenetis-network

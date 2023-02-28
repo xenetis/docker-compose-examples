@@ -1,7 +1,6 @@
 version: "3.5"
 
 services:
-  
 
   matomo:
     container_name: "matomo"
@@ -13,9 +12,9 @@ services:
       MATOMO_DATABASE_HOST: 'matomo-db'
       MATOMO_DATABASE_ADAPTER: 'mysql'
       MATOMO_DATABASE_TABLES_PREFIX: 'matomo_'
-      MATOMO_DATABASE_USERNAME: '${MATOMO_DB_USERNAME}'
-      MATOMO_DATABASE_PASSWORD: '${MATOMO_DB_PASSWORD}'
-      MATOMO_DATABASE_DBNAME: '${MATOMO_DB_DATABASE}'
+      MATOMO_DATABASE_USERNAME: '${MARIADB_USER}'
+      MATOMO_DATABASE_PASSWORD: '${MARIADB_PASSWORD}'
+      MATOMO_DATABASE_DBNAME: '${MARIADB_DATABASE}'
     networks:
       xenetis-network:
     depends_on:
@@ -26,10 +25,10 @@ services:
     image: 'mariadb:10.5'
     environment:
       TZ: Europe/Paris
-      MARIADB_ROOT_PASSWORD: '${MATOMO_DB_ROOT_PASSWORD}'
-      MARIADB_DATABASE: '${MATOMO_DB_DATABASE}'
-      MARIADB_USER: '${MATOMO_DB_USERNAME}'
-      MARIADB_PASSWORD: '${MATOMO_DB_PASSWORD}'
+      MARIADB_ROOT_PASSWORD: '${MARIADB_ROOT_PASSWORD}'
+      MARIADB_DATABASE: '${MARIADB_DATABASE}'
+      MARIADB_USER: '${MARIADB_USER}'
+      MARIADB_PASSWORD: '${MARIADB_PASSWORD}'
     volumes:
       - "${PATH_DATAS}/matomo/mysql: /var/lib/mysql"
     networks:
