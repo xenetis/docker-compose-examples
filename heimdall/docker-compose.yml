@@ -11,7 +11,7 @@ services:
     volumes:
       - ${PATH_DATAS}/heimdall:/config
     ports:
-      - 8001:80
+      - "8001:80"
     restart: always
     networks:
       xenetis-network:

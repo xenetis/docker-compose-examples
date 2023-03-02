@@ -5,9 +5,9 @@ services:
     container_name: gitlab-ee
     image: 'gitlab/gitlab-ee:latest'
     ports:
-      - '8009:80'
-      #- '443:443'
-      - '2223:22'
+      - "8009:80"
+      #- "443:443"
+      - "2223:22"
     environment:
       - TZ=Europe/Paris
     hostname: ${GITLAB_DOMAIN}

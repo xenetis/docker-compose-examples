@@ -19,9 +19,9 @@ services:
       - ${PATH_DATAS}/transmission/downloads:/downloads
       - ${PATH_DATAS}/transmission/watch:/watch
     ports:
-      - 8007:9091
-      - 51413:51413
-      - 51413:51413/udp
+      - "8007:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
     restart: unless-stopped
     networks:
       xenetis-network:

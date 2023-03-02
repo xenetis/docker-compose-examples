@@ -14,7 +14,7 @@ services:
       - ${PATH_CONFIG}/jackett:/config
       - ${PATH_DATAS}/downloads:/downloads
     ports:
-      - 8006:9117
+      - "8006:9117"
     restart: unless-stopped
     networks:
       xenetis-network:

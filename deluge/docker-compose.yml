@@ -9,8 +9,8 @@ services:
     cap_add:
       - NET_ADMIN
     ports:
-      - 8005:8112
-      - 58846:58846
+      - "8005:8112"
+      - "58846:58846"
     devices:
       - /dev/net/tun:/dev/net/tun
     environment:

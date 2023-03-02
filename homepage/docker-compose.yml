@@ -5,7 +5,7 @@ services:
     image: ghcr.io/benphelps/homepage:latest
     container_name: homepage
     ports:
-      - 8002:3000
+      - "8002:3000"
     volumes:
       - ${PATH_DATAS}/homepage:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
