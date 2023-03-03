@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  transmission-nordvpn:
+    image: haugene/transmission-openvpn:latest
+    container_name: transmission-nordvpn
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ${PATH_DATAS}/transmission-nordvpn:/data
+      - ${PATH_CONFIG}/transmission-nordvpn:/config
+    environment:
+      - OPENVPN_PROVIDER=${OPENVPN_PROVIDER}
+      - OPENVPN_USERNAME=${OPENVPN_USERNAME}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - OPENVPN_CONFIG=${OPENVPN_CONFIG}
+      - LOCAL_NETWORK=192.168.0.0/16
+    ports:
+      - "8011:9091"
+    restart: unless-stopped
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

@@ -72,9 +72,10 @@ make start <container>
 
 ### 🗃 Torrent
 - [Transmission](transmission) - A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux.
+- [Transmission with NordVPN](transmission-nordvpn) - This container contains OpenVPN and Transmission with a configuration where Transmission is running only when OpenVPN has an active tunnel. It has built in support for many popular VPN providers to make the setup easier.
 - [Deluge](deluge) - This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel.
-- [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
-
+- [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps ([Sonarr](sonarr), Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
+- [Sonarr](sonarr) - Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 ---
 
 ### 🔐 Source Code Management & Version Control
