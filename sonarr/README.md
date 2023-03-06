@@ -1,7 +1,7 @@
 # SONARR
 
-Website: https://transmissionbt.com/
+Website: https://sonarr.tv/
 
-Github: https://github.com/transmission/transmission
+Github: https://github.com/Sonarr/Sonarr
 
 Docker Hub: https://hub.docker.com/r/linuxserver/sonarr

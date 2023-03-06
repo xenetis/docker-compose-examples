@@ -1,0 +1,23 @@
+version: "3.5"
+
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ${PATH_CONFIG}/radarr:/config
+      - ${PATH_DATAS}/movies:/movies #optional
+      - ${PATH_DATAS}/downloads:/downloads #optional
+    ports:
+      - "8013:7878"
+    restart: unless-stopped
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

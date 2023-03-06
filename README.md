@@ -13,7 +13,8 @@ Docker Compose examples for selfhosted projects
  - Config and Datas volumes are set by default in **.env** of each directory, feel free to update it as your own directories
  - Example config files are provided for examples, you can locate it in your own config directory
  - Default credentials should be adjusted, just search: **secretPasswordChangeMePlease**
-
+ - Default email should be ajusted, just search: **email@example.com**
+ - Some domains/hostname should be ajusted, just search: **example.com**
 ---
 
 ## 🎓 Usage
@@ -74,8 +75,10 @@ make start <container>
 - [Transmission](transmission) - A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux.
 - [Transmission with NordVPN](transmission-nordvpn) - This container contains OpenVPN and Transmission with a configuration where Transmission is running only when OpenVPN has an active tunnel. It has built in support for many popular VPN providers to make the setup easier.
 - [Deluge](deluge) - This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel.
-- [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps ([Sonarr](sonarr), Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
+- [Jackett](jackett) - Jackett works as a proxy server: it translates queries from apps ([Sonarr](sonarr), [Radarr](radarr), [Lidarr](lidarr), SickRage, CouchPotato, Mylar3, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.
 - [Sonarr](sonarr) - Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+- [Radarr](radarr) - Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
+- [Lidarr](lidarr) - Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 ---
 
 ### 🔐 Source Code Management & Version Control

@@ -1,0 +1,23 @@
+version: "3.5"
+
+services:
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ${PATH_CONFIG}/lidarr:/config
+      - ${PATH_DATAS}/music:/music #optional
+      - ${PATH_DATAS}/downloads:/downloads #optional
+    ports:
+      - "8014:8686"
+    restart: unless-stopped
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
