@@ -17,8 +17,8 @@ services:
       - GITEA__server__SSH_DOMAIN=git.example.com
     hostname: gitea
     ports:
-      - 8004:3000
-      - 2222:22
+      - "8004:3000"
+      - "2222:22"
     image: gitea/gitea:latest
     restart: unless-stopped
     volumes:
