@@ -55,7 +55,7 @@ make start <container>
 - [OVH-Monitoring](ovhmonitoring) - OVH VPS/Cloud Monitoring via OVH API using PHP.
 - [Portainer](portainer) - Portainer is a lightweight management UI which allows you to easily manage your different Docker environments (Docker hosts or Swarm clusters).
 - [Portainer Agent](portainer-agent) - The Portainer Agent is a workaround for a Docker API limitation when using the Docker API to manage a Docker environment.
-
+- [Uptime Kuma](uptime-kuma) - Uptime Kuma is an easy-to-use self-hosted monitoring tool.
 ---
 
 ### 🌐 Networking
