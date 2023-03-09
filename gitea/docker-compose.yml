@@ -33,6 +33,7 @@ services:
     volumes:
       - ${PATH_DATAS}/gitea-db:/var/lib/mysql
     environment:
+      - TZ=Europe/Paris
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       - MARIADB_DATABASE=${MARIADB_DATABASE}
       - MARIADB_USER=${MARIADB_USER}

@@ -1,0 +1,46 @@
+version: "3.5"
+
+services:
+  statping:
+    container_name: statping
+    image: statping/statping
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8016:8080"
+    volumes:
+      - ${PATH_DATAS}/statping-app:/app
+    links:
+      - statping-db
+    environment:
+      - TZ=Europe/Paris
+      - DB_CONN=mysql
+      - DB_HOST=statping-db
+      - DB_PORT=3306
+      - DB_DATABASE=${MARIADB_DATABASE}
+      - DB_USER=${MARIADB_USER}
+      - DB_PASS=${MARIADB_PASSWORD}
+    networks:
+      xenetis-network:
+
+  statping-db:
+    container_name: statping-db
+    image: mysql:5.7
+    volumes:
+      - ${PATH_DATAS}/statping-db:/var/lib/mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      - TZ=Europe/Paris
+      - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MARIADB_DATABASE}
+      - MYSQL_USER=${MARIADB_USER}
+      - MYSQL_PASSWORD=${MARIADB_PASSWORD}
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

@@ -56,6 +56,7 @@ make start <container>
 - [Portainer](portainer) - Portainer is a lightweight management UI which allows you to easily manage your different Docker environments (Docker hosts or Swarm clusters).
 - [Portainer Agent](portainer-agent) - The Portainer Agent is a workaround for a Docker API limitation when using the Docker API to manage a Docker environment.
 - [Uptime Kuma](uptime-kuma) - Uptime Kuma is an easy-to-use self-hosted monitoring tool.
+- [Statping](statping) - An easy-to-use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.
 ---
 
 ### 🌐 Networking
