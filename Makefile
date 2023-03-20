@@ -28,5 +28,9 @@ restart:
 	cd $(filter-out $@,$(MAKECMDGOALS)) && \
 	docker-compose stop && \
 	docker-compose up -d
+
+secure:
+	find ./ -type f \( -iname .env -o -iname \*.ini \) -exec sed -i "s|secretPasswordChangeMePlease|$(openssl rand -hex 32)|g" {} \;
+
 #%:
 #    @:

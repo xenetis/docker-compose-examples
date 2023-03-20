@@ -10,11 +10,22 @@ Docker Compose examples for selfhosted projects
 
 ## 📖 Infos
  - Docker network is defined in root [docker-compose.yml](docker-compose.yml), just run `make init`to create network the first time
- - Config and Datas volumes are set by default in **.env** of each directory, feel free to update it as your own directories
+ - Config and Data's volumes are set by default in **.env** of each directory, feel free to update it as your own directories
  - Example config files are provided for examples, you can locate it in your own config directory
  - Default credentials should be adjusted, just search: **secretPasswordChangeMePlease**
- - Default email should be ajusted, just search: **email@example.com**
- - Some domains/hostname should be ajusted, just search: **example.com**
+ - Default email should be adjusted, just search: **email@example.com**
+ - Some domains/hostname should be adjusted, just search: **example.com**
+
+Il you wanna be sure to remove all **secretPasswordChangeMePlease** just run:
+
+```bash
+find ./ -type f \( -iname .env -o -iname \*.ini \) -exec sed -i "s|secretPasswordChangeMePlease|$(openssl rand -hex 32)|g" {} \;
+```
+or run 
+````bash
+make secure
+````
+
 ---
 
 ## 🎓 Usage
@@ -34,6 +45,7 @@ make start <container>
 - **start \<container>** start a container stack 
 - **stop \<container>** stop a container stack
 - **restart \<container>** restart a container stack
+- **secure** change all **secretPasswordChangeMePlease**
 
 ---
 
