@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  webnmap:
+    image: xenetis/web-nmap:latest
+    container_name: webnmap
+    restart: always
+    environment:
+      - TZ=Europe/Paris
+    ports:
+      - "8017:5000"
+    volumes:
+      - "${PATH_DATAS}/webnmap:/src/_datas"
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
