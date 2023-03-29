@@ -7,7 +7,8 @@ default:
 	- 'clean' prune unused containers and images \n\
 	- 'start <container>' start a container stack \n\
 	- 'stop <container>' stop a container stack \n\
-	- 'restart <container>' restart a container stack "
+	- 'restart <container>' restart a container stack \n\
+	- 'secure' change default password to a random one"
 
 init:
 	docker-compose up
