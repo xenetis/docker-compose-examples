@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+  it-tools:
+    image: corentinth/it-tools
+    container_name: it-tools
+    environment:
+      - TZ=Europe/Paris
+    ports:
+      - "8018:80"
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network

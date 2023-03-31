@@ -96,6 +96,10 @@ make start <container>
 - [Lidarr](lidarr) - Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 ---
 
+### 🛠 Tools
+- [IT-Tools](it-tools) - Collection of handy online tools for developers, with great UX.
+---
+
 ### 🔐 Source Code Management & Version Control
 - [Gitea](gitea) - Community managed fork of Gogs, lightweight code hosting solution.
 - [Gitlab Enterprise Edition](gitlab-ee) - Self Hosted Git repository management, code reviews, issue tracking, activity feeds and wikis.
