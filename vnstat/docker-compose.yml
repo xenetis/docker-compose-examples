@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  vnstat:
+    image: vergoh/vnstat:latest
+    container_name: vnstat
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      - "${PATH_DATAS}/vnstatdb:/var/lib/vnstat"
+    environment:
+      - TZ=Europe/Paris
+      - HTTP_PORT=8685
+      - HTTP_BIND=*
+      - HTTP_LOG=/dev/stdout
+      - LARGE_FONTS=1
+      - CACHE_TIME=1
+      - RATE_UNIT=1
+      - INTERFACE_ORDER=0
+      - PAGE_REFRESH=0
