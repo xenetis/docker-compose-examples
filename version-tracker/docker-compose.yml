@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  version-tracker:
+    image: xenetis/version-tracker:latest
+    container_name: version-tracker
+    restart: always
+    environment:
+      - TZ=Europe/Paris
+    ports:
+      - "8020:5000"
+    networks:
+      xenetis-network:
+
+networks:
+  xenetis-network:
+    name: xenetis-network
